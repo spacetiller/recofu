@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/home/index",
-    "pages/list/index",
+		"pages/my/my",
+		"pages/list/index",
     "pages/webview/index",
     "pages/detail/index"
   ],
