@@ -51,7 +51,7 @@ Page({
         })
 				wx.setStorage({
 					key: 'countryIndex',
-					data: "000"
+					data: val
 				});
       }
     })
