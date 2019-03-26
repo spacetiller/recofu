@@ -4,6 +4,12 @@
 .show {
   display:block;
 }
+.flex-inline-around {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;  
+  align-items: center;
+}
 .flex-inline-between {
   display: flex;
   flex-direction: row;
@@ -29,13 +35,29 @@
 .marginLeft {
 	margin-left: 30rpx;
 }
-.smallLabel {
-	font-size: 28rpx;
-}
-.smallGrayLabel {
-	font-size: 28rpx;
-	color: #BBBBBB;
-}
 .bigLabel {
 	font-size: 36rpx;
+}
+.middleLabel {
+	font-size: 34rpx;
+}
+.smallLabel {
+	font-size: 32rpx;
+}
+.smallGrayLabel {
+	font-size: 32rpx;
+	color: #AAAAAA;
+}
+.tinyLabel {
+	font-size: 28rpx;
+}
+.tinyGrayLabel {
+	font-size: 32rpx;
+	color: #AAAAAA;
+}
+titleColor {
+	color: #101010;
+}
+detailColor {
+	color: #101010;
 }
