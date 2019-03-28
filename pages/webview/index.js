@@ -7,7 +7,9 @@ Page({
     onLoad: function(options){
 				var url = '';
 				console.log(options)
-				url = options.url + '?a=' + options.a;
-				this.setData({ url: url })
+				if ('' != options.url) {
+					url = options.url + '?id=' + options.id;
+					this.setData({ url: url })
+				}
     }
 });
