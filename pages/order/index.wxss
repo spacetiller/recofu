@@ -53,89 +53,79 @@
 .productArea {
 	padding: 20rpx;
 }
+.provider {
+	padding-bottom: 14rpx;
+	border-bottom: 1px solid rgba(229, 229, 229, 1);
+	margin-bottom: 18rpx;
+}
 .productImage {
 	width: 140rpx;
 	height: 140rpx;
 }
+.productInfo {
+	margin-left: 20rpx;
+	width: 550rpx;
+}
 .productTitle {
-	width: 480rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-	margin-top: -20rpx;
 }
 .productPrice {
 	color: #E51C23;
 }
-.productClose {
-	margin: 0rpx 0rpx 20rpx 10rpx;
-	width: 40rpx;
-	height: 40rpx;
-}
-.subtitle {
-	margin-top: 40rpx;
-}
-.specBtnArea {
-	flex-flow: row wrap;
-	align-content: space-around;
-}
-.specBtn {
+.sendArea {
 	margin-top: 20rpx;
-	margin-right: 20rpx;
-	width: 200rpx;
-	height: 63rpx;
-	line-height: 63rpx;
-	border-radius: 100rpx;
+	border-top: 1px solid rgba(229, 229, 229, 1);
+	border-bottom: 1px solid rgba(229, 229, 229, 1);
+	padding: 35rpx 20rpx;
+}
+.fbArea {
+	border-bottom: 1px solid rgba(229, 229, 229, 1);
+	padding: 35rpx 20rpx;
+}
+.fbArea textarea {
+	width: 555rpx;
+	height: 150rpx;
+}
+.priceArea {
+	padding: 15rpx 20rpx;
+}
+.feeArea {
+	padding: 15rpx 20rpx;
+}
+.totalArea {
+	border-top: 1px solid rgba(229, 229, 229, 1);
+	border-bottom: 1px solid rgba(229, 229, 229, 1);
+	padding: 35rpx 20rpx;
+}
+.fufenArea {
+	padding: 15rpx 20rpx;
+	margin-bottom: 20rpx;
+}
+.extra {
+	margin-bottom: 20rpx;
+	padding: 0 20rpx;
 	text-align: center;
 }
-.specBtn.plain {
-	background-color: #FFFFFF;
-	color: rgba(190, 194, 201, 1);
-	border: 1px solid rgba(190, 194, 201, 1);
-}
-.specBtn.chosen {
-	background-color: rgba(229, 28, 35, 1);
-	color: rgba(255, 255, 255, 1);
-	border: 0rpx;
-}
-.productLeft {
-	margin-top: 20rpx;
-}
-.productnumb1 {
-	width: 72rpx;
-	height: 72rpx;
-	line-height: 65rpx;
-	border-radius: 20rpx 0rpx 0rpx 20rpx;
-	padding: 0rpx;
-	/*background-color: rgba(236, 236, 236, 1);*/
-	color: rgba(16, 16, 16, 1);
-	text-align: center;
-	border: 1px solid rgba(187, 187, 187, 1);
-}
-.productnumi1 {
-	width: 110rpx;
-	height: 68rpx;
-	color: rgba(136, 136, 136, 1);
-	text-align: center;
-	border-top: 1px solid rgba(187, 187, 187, 1);
-	border-bottom: 1px solid rgba(187, 187, 187, 1);
-}
-.productnumb2 {
-	width: 72rpx;
-	height: 72rpx;
-	line-height: 65rpx;
-	border-radius: 0px 20rpx 20rpx 0px;
-	padding: 0rpx;
-	color: rgba(16, 16, 16, 1);
-	text-align: center;
-	border: 1px solid rgba(187, 187, 187, 1);
-		
-}
-.nextBtn {
-	margin-top: 80rpx;
+.submitArea {
+	margin-top: 200rpx;
 	width: 100%;
+}
+.submitInfo {
+	padding: 0rpx 20rpx;
+}
+.subTotal {
+	margin-top: 70rpx;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submitBtn {
+	margin-top: 80rpx;
+	width: 200rpx;
 	height: 90rpx;
 	line-height: 90rpx;
 	border-radius: 0rpx;

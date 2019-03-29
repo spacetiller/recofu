@@ -35,6 +35,7 @@
 .marginLeft {
 	margin-left: 30rpx;
 }
+
 .bigLabel {
 	font-size: 36rpx;
 }
@@ -55,9 +56,29 @@
 	font-size: 28rpx;
 	color: #AAAAAA;
 }
-titleColor {
+.microLabel {
+	font-size: 24rpx;
+}
+.microGrayLabel {
+	font-size: 24rpx;
+	color: #AAAAAA;
+}
+.miuLabel {
+	font-size: 22rpx;
+}
+.nanoLabel {
+	font-size: 20rpx;
+}
+
+.titleColor {
 	color: #101010;
 }
-detailColor {
+.contentColor {
 	color: #101010;
+}
+.detailColor {
+	color: #AAAAAA;
+}
+.myred {
+	color: #E51C23;
 }

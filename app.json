@@ -1,14 +1,14 @@
 {
   "pages": [
-		"pages/order/index",
-		"pages/product/index",
-		"pages/shop/index",
 		"pages/index/index",
     "pages/home/index",
 		"pages/list/index",
     "pages/webview/index",
     "pages/detail/index",
 		"pages/periphery/index",
+		"pages/order/index",
+		"pages/product/index",
+		"pages/shop/index",
 		"pages/my/index"
 	],
   "window": {

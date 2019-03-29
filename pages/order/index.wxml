@@ -1,5 +1,5 @@
 <!--pages/order/index.wxml-->
-<view class="container">
+<view class="container contentColor">
 	<view class="address_box flex-inline-between" bindtap="gotoAddr">
 		<view class="addrMain flex-vertical" wx:if="{{address.address}}">
 			<view class="flex-inline-between">
@@ -20,34 +20,57 @@
 	<view class="addrImage"></view>
 	<view class="product_box" >
 		<view class="productArea flex-vertical">
-			<text class='provider tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">合作者：{{product.provider}}</text>
+			<text class='provider tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">提供者：{{product.provider}}</text>
 			<view class="flex-inline-between">
 				<image class='productImage' src='{{imagelist[0]}}' mode='aspectFill'></image>
-				<view class="flex-vertical">
+				<view class="productInfo flex-vertical">
+					<text class='productTitle smallLabel' decode="{{true}}" space="{{nbsp}}">{{product.name}}</text>
+					<text class='productPrice smallLabel' decode="{{true}}" space="{{nbsp}}">￥ {{product.priceStr}}</text>
 					<view class="flex-inline-between">
-						<text class='productTitle middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.name}}</text>
+						<text class='productSpec tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">已选{{order.specName}}：{{order.specValue}}</text>
+						<text class='productNum tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">x{{order.num}}</text>
 					</view>
-					<text class='productPrice middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.priceStr}}</text>
-				</view>
-			</view>
-			<text class='subtitle middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.specName}}</text>
-			<view class="specBtnArea flex-inline-left">
-				<block wx:for="{{product.specs}}" wx:key="*this">
-					<button data-index="{{index}}" class="specBtn {{index == specChosenId?'chosen':'plain'}} tinyLabel" bindtap="changeSpec">{{item}}</button>
-				</block>
-			</view>
-			<view class="flex-inline-between">
-				<view class="flex-vertical">
-					<text class='subtitle middleLabel' decode="{{true}}" space="{{nbsp}}">购买数量</text>
-					<text class='productLeft tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">剩余：{{product.leftNum}}</text>
-				</view>
-				<view class="flex-inline-right">
-					<button class="productnumb1 middleLabel" data-index="{{index}}" bindtap="numMinus">-</button>
-					<input class="productnumi1 smallLabel" auto-focus value="{{order_num}}" bindinput="numInput"></input>
-					<button class="productnumb2 middleLabel" data-index="{{index}}" bindtap="numAdd">+</button>
 				</view>
 			</view>
 		</view>
-		<button class="nextBtn middleLabel" bindtap="gotoOrder">下一步</button>
 	</view>
+	<view class="sendArea flex-inline-between">
+		<text class='smallLabel' decode="{{true}}" space="{{nbsp}}">配送方式</text>
+		<text class='tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">{{order.sendType}}</text>
+	</view>
+	<view class="fbArea flex-inline-between">
+		<text class='smallLabel' decode="{{true}}" space="{{nbsp}}">卖家留言</text>
+		<textarea class='tinyLabel' placeholder="留言建议，提前协商（50个字以内）" bindinput="inputFeedback"></textarea>
+	</view>
+	<view class="priceArea flex-inline-between">
+		<text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">商品金额</text>
+		<text class='tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">￥{{order.sprice}}</text>
+	</view>
+	<view class="feeArea flex-inline-between">
+		<text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">运费</text>
+		<text class='tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">+￥{{order.sendFee}}</text>
+	</view>
+	<view class="totalArea flex-inline-between">
+		<text class='smallLabel' decode="{{true}}" space="{{nbsp}}">合计</text>
+		<text class='smallLabel myred' decode="{{true}}" space="{{nbsp}}">￥{{order.total}}</text>
+	</view>
+	<view class="fufenArea flex-inline-between">
+		<text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">获得福分</text>
+		<text class='tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">{{order.fufen}}</text>
+	</view>
+	<view class='extra'>
+		<text class='microGrayLabel' decode="{{true}}" space="{{nbsp}}">本订单享受保险保障</text>
+	</view>
+	<view class='extra'>
+		<text class='microGrayLabel' decode="{{true}}" space="{{nbsp}}">由品牌名提供技术支持</text>
+	</view>
+	<view class="submitArea smallLabel flex-inline-between">
+		<view class="submitInfo flex-inline-left">
+			<text class="subTotal flex-vertical" decode="{{true}}" space="{{nbsp}}">合计：  </text>
+			<text class="subTotal flex-vertical myred" decode="{{true}}" space="{{nbsp}}">￥{{order.total}}</text>
+		</view>
+		<view>
+			<button class="submitBtn smallLabel" bindtap="submit">提交订单</button>
+		</view>
+	</view>	
 </view>
