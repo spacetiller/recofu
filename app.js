@@ -14,6 +14,7 @@ var config = {
 App({
   onLaunch: function () {
 		// 登录
+		var _this = this;
 		wx.login({
 			success: res => {
 				console.log("------------- wx.login -------------");
@@ -50,6 +51,21 @@ App({
 				} /* success */
 			});
 		}
+		wx.getSystemInfo({
+			success: function (res) {
+				console.log(res.model)
+				// console.log(res.pixelRatio)
+				// console.log(res.windowWidth)
+				// console.log(res.windowHeight)
+				// console.log(res.language)
+				// console.log(res.version)
+				// console.log(res.platform)
+				if (res.model == 'iPhone X') {
+					_this.globalData.isIPX = true;
+					// console.log(_this.globalData.isIpx)
+				}
+			}
+		})
   },
 	loginUser: function (callback) {
 		var _this = this;
@@ -61,8 +77,7 @@ App({
 			//var userinfo = app.globalData.userInfo;
 			userinfo.code = this.globalData.userCode;
 			// 请求数据
-			//const url = this.globalData.main_url + "/users/login?name=" + app.globalData.userInfo.nickName + "&code=" + app.globalData.userCode;
-			const url = this.globalData.main_url + "/users/login";
+			const url = "https://" + this.globalData.config.host2 + "users/login";
 			wx.request({
 				url: url,
 				method: "POST",
@@ -158,6 +173,7 @@ App({
 		userCode: '',
 		userInfo: {},
     util: util,
+		isIPX: false,
     config: config
   }
 })

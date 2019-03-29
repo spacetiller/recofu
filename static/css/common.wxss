@@ -52,7 +52,7 @@
 	font-size: 28rpx;
 }
 .tinyGrayLabel {
-	font-size: 32rpx;
+	font-size: 28rpx;
 	color: #AAAAAA;
 }
 titleColor {
