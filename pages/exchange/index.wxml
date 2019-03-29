@@ -1,0 +1,16 @@
+<!--pages/exchange/index.wxml-->
+<view class="page">
+	<view class="page-body">
+		<view data-index="0" class="select-page">
+			<view class="page1 flex-vertical">
+				<input class="scoreInput" auto-focus placeholder="复制支付后订单详情中的商户单号到这里" bindinput="scoreInput"></input>
+				<button class="scoreBtn" bindtap='submit'>提交</button>
+				<text class="example smallGrayLabel">示例：在微信支付或支付宝支付成功的订单详情中，可看到画红框的商户单号就是需要复制的福分密钥，每个商户单号只可兑换一次福分，先兑先得</text>
+				<text class="weixinText smallGrayLabel">微信支付</text>
+				<image class="payImage" src="{{wximg}}" mode='aspectFill'></image>
+				<text class="alipayText smallGrayLabel">支付宝支付</text>
+				<image class="payImage" src="{{alimg}}" mode='aspectFill'></image>
+			</view>
+		</view>
+	</view>
+</view>

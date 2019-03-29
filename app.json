@@ -3,12 +3,13 @@
 		"pages/index/index",
     "pages/home/index",
 		"pages/list/index",
-    "pages/webview/index",
     "pages/detail/index",
+		"pages/webview/index",
+		"pages/exchange/index",
 		"pages/periphery/index",
-		"pages/order/index",
-		"pages/product/index",
 		"pages/shop/index",
+		"pages/product/index",
+		"pages/order/index",
 		"pages/my/index"
 	],
   "window": {

@@ -73,6 +73,9 @@
 .titleColor {
 	color: #101010;
 }
+.deepGray {
+	color: #737373;
+}
 .contentColor {
 	color: #101010;
 }

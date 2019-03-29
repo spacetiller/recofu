@@ -7,7 +7,7 @@ Page({
 	 */
 	data: {
 		title: "福分",
-		labels: ['兑换福分', '行善积德', '福气好物'],
+		labels: ['行善积德', '福气好物'],
 		_num: 0,
 		goods: [
 			{pid: 1, name: '关注大凉山贫困儿童的生存现状', price: 100, ptype: 1, imgurl: 'http://image.pk4yo.com/recofu/goods_daliangshan_1.jpg', provider: '合作者'},
@@ -59,27 +59,7 @@ Page({
 			})
 		}
 	},
-	submit: function (e) {
-		var url = "https://" + config.host2 + "users/login";
-		/*util.makeRequest(that, url, {}, function (res) {
-			if (res.code == 0) {
-				console.log(res);
-				that.setData({ frontList: res.data })
-			} else {
-				console.log(res.data.msg);
-				//return false;
-			}
-		}, 'GET');*/
-		// below should be in success cb of request
-		wx.setNavigationBarTitle({
-			title: "福分兑换"
-		})
-		this.setData({
-			title: "福分兑换",
-			showFinish: true
-		})
 
-	},
 	gotoGoods: function (e) {
 		var url = "https://" + config.host2 + "users/login";
 		/*util.makeRequest(that, url, {}, function (res) {

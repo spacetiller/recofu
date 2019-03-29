@@ -23,6 +23,7 @@ Page({
 		total: 0,
 		specChosenId: 0,
 		order_num: 1,
+		userinfo: { fufen: 190 },
 		product: {}
 	},
 
@@ -31,11 +32,12 @@ Page({
 	 */
 	onLoad: function (options) {
 		var pid = options.pid;
-		var ptype = 3; //options.ptype;
+		var ptype = 0; 
 		var product = {};
 		var title = "";
 		var imagelist = [], detailimgs = [];
 
+		if (options.ptype) ptype = options.ptype;
 		if(ptype == 3){
 			product = { pid: 1, name: '灭度沉香单圈佛珠手链男女款手串念珠平安吉祥礼物状', price: 6930, priceStr: "6930.00", ptype: 3, imgurl: 'http://image.pk4yo.com/recofu/product_bracelet_1.jpg', leftNum: 105, saleNum: 24, specName: '规格', specs: ['规格1', '规格2', '规格3', '规格4'], provider: '智天乐游' };
 			imagelist = ["http://image.pk4yo.com/recofu/product_bracelet_slider_1.jpg",
@@ -75,6 +77,9 @@ Page({
 			detailimgs: detailimgs,
 			ptype: ptype
 		});
+
+
+
 	},
 
 	imageChange: function(e){
@@ -84,6 +89,14 @@ Page({
 	},
 	submit: function(){
 
+	},
+	submitContrib: function () {
+		wx.showToast({
+			title: '捐赠成功！',
+			icon: 'success',
+			duration: 1000,
+			mask: false
+		});
 	},
 	showModal: function () {
 		// 显示遮罩层

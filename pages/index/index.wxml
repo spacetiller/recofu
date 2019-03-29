@@ -2,7 +2,7 @@
   <view class='page-body'>
     <view class='page-list' wx:for="{{frontList}}" wx:key="id">
       <!--类型判断,显示不同的数据-->
-      <navigator url='../{{item.pageName}}/index{{item.linkType==1?"":"?url=" + item.url + "&id=1"}}'>
+      <navigator url='../{{item.pageName}}/index?{{item.param}}={{item.value}}'>
         <view class='listItem flex-vertical'>
           <image class='poster' src='{{item.imgurl}}' mode='aspectFill'></image>
           <text class='title bigLabel'>{{item.title}}</text>

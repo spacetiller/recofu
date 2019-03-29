@@ -62,15 +62,23 @@
 	background-color: #FFFFFF;
 	text-align: right;
 }
+.submitArea text {
+	margin-left: 20rpx;
+}
 .submitBtn {
-	margin: 0rpx 0rpx 0rpx 550rpx; 
+	margin: 0rpx 0rpx 0rpx 0rpx; 
 	width: 200rpx;
-	height: 90rpx;
+	height: 100rpx;
+	line-height: 100rpx;
 	border-radius: 0rpx;
 	background-color: rgba(229, 28, 35, 1);
 	color: rgba(255, 255, 255, 1);
 	text-align: center;
-	line-height: 90rpx;
+}
+.submitBtn[disabled] {
+    color: #FFFFFF !important;
+    background: #CACACA !important;
+		border: 0rpx;
 }
 
 /* ---------------  弹出购买框  ----------------- */
@@ -191,3 +199,15 @@
 	font-family: Microsoft Yahei;
 
 }
+
+.currentFufen {
+	margin-top: 60rpx;
+	padding: 13rpx 20rpx;
+}
+.needFufen {
+	padding: 35rpx 20rpx;
+}
+.leftFufen {
+	padding: 13rpx 20rpx;
+}
+

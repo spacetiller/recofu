@@ -11,18 +11,7 @@
 	<loading hidden="{{!loading}}">加载中...</loading>
 	<view class="page">
 		<view class="page-body">
-			<view data-index="0" class="select-page {{_num==0?'show':'hidden'}}">
-				<view class="page1 flex-vertical">
-					<input class="scoreInput" auto-focus placeholder="复制支付后订单详情中的商户单号到这里" bindinput="scoreInput"></input>
-					<button class="scoreBtn" bindtap='submit'>提交</button>
-					<text class="example smallGrayLabel">示例：在微信支付或支付宝支付成功的订单详情中，可看到画红框的商户单号就是需要复制的福分密钥，每个商户单号只可兑换一次福分，先兑先得</text>
-					<text class="weixinText smallGrayLabel">微信支付</text>
-					<image class="payImage" src="../../static/images/goods_default.jpg" mode='aspectFill'></image>
-					<text class="alipayText smallGrayLabel">支付宝支付</text>
-					<image class="payImage" src="../../static/images/goods_default.jpg" mode='aspectFill'></image>
-				</view>
-			</view>
-			<view data-index="1"  class="select-page {{_num==1?'show':'hidden'}}">
+			<view data-index="0"  class="select-page {{_num==0?'show':'hidden'}}">
 				<view class="page2">
 					<block wx:for="{{goods}}" wx:for-index="index" wx:key="*this">
 						<view class="goodsitem flex-vertical">
@@ -38,7 +27,7 @@
 					</block>
 				</view>
 			</view>
-			<view data-index="2" class="select-page {{_num==2?'show':'hidden'}}">
+			<view data-index="1" class="select-page {{_num==1?'show':'hidden'}}">
 				<view class="page3">
 					<block wx:for="{{products}}" wx:for-index="index" wx:key="*this">
 						<view class="proitem flex-vertical">

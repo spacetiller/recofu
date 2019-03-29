@@ -1,0 +1,82 @@
+/* pages/exchange/index.wxss */
+@import "../../static/css/common.wxss";
+
+
+.container {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.page {
+  width: 100%;
+  padding: 0rpx 0rpx;
+}
+
+.page-body {
+  padding: 0rpx 0rpx;
+}
+
+.select-page {
+  width: 100%;
+  padding: 0rpx 0rpx;
+}
+
+.page1 {
+  padding: 0rpx 40rpx;
+}
+
+.scoreInput {
+  margin-top: 60rpx;
+  padding: 15rpx 40rpx;
+  font-size: 32rpx;
+  border: 1px solid #bec2c9;
+  border-radius: 100rpx;
+}
+
+.scoreBtn {
+  width: 100%;
+  background-color: #e51c23;
+  margin-top: 40rpx;
+  padding: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  border: 1px solid #bec2c9;
+  border-radius: 100rpx;
+}
+
+.example {
+  margin-top: 100rpx;
+}
+
+.weixinText {
+  margin-top: 60rpx;
+}
+
+.alipayText {
+  margin-top: 40rpx;
+}
+
+.payImage {
+  width: 100%;
+}
+
+.changedPage {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding: 30rpx 0rpx;
+}
+
+.showText {
+  text-align: center;
+  margin: 106rpx 100rpx;
+}
+
+.gotoBtn {
+  width: 200rpx;
+  height: 60rpx;
+  margin-top: 106rpx;
+  border: 1px solid #aaa;
+  border-radius: 100rpx;
+  line-height: 1.5;
+}

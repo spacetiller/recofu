@@ -1,11 +1,13 @@
 var host = "admin.acm.pk4yo.com/",
 host2 = "jufuhui.pk4yo.com/",
 util = require('./utils/util.js'),
-imageUrl = "http://image.pk4yo.com";
+imageUrl = "http://image.pk4yo.com",
+appName = "recofu";
 
 var config = {
     host: host,
 		host2: host2,
+		appName: appName,
     imageUrl,
     searchSimilarImage: `https://${host}/api/Maintenance/searchImg`,
     getDetailImage: `https://${host}/api/Maintenance/getDetailImage`,
