@@ -1,2 +1,13 @@
 <!--pages/periphery/index.wxml-->
-<text>pages/periphery/index.wxml</text>
+<view class="page">
+  <view class='page-body'>
+    <view class='page-list' wx:for="{{list}}" wx:key="id">
+      <!--类型判断,显示不同的数据-->
+      <navigator url='/pages/webview/index?url={{item.url}}'>
+        <view class='listItem flex-vertical'>
+          <image class='poster' src='{{item.imgurl}}' mode='aspectFill'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

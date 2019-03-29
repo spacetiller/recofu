@@ -1,0 +1,53 @@
+<!--pages/order/index.wxml-->
+<view class="container">
+	<view class="address_box flex-inline-between" bindtap="gotoAddr">
+		<view class="addrMain flex-vertical" wx:if="{{address.address}}">
+			<view class="flex-inline-between">
+				<view class="flex-inline-left">
+					<image src='../../static/images/address_order.png' mode='aspectFill'></image>
+					<text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">收货人姓名：{{address.receiveName}}</text>
+				</view>
+				<text class='tinyLabel'>000000000</text>
+			</view>
+			<text class='addrAddr tinyLabel' decode="{{true}}" space="{{nbsp}}">收货地址：{{address.address}}</text>
+		</view>
+		<view class="addrMain flex-inline-left" wx:else>
+			<button class="addrNew middleLabel" data-index="{{index}}" bindtap="numMinus">+</button>
+			<text class='tinyLabel'>编辑添加新地址</text>
+		</view>
+		<view class="arrow"></view>
+	</view>
+	<view class="addrImage"></view>
+	<view class="product_box" >
+		<view class="productArea flex-vertical">
+			<text class='provider tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">合作者：{{product.provider}}</text>
+			<view class="flex-inline-between">
+				<image class='productImage' src='{{imagelist[0]}}' mode='aspectFill'></image>
+				<view class="flex-vertical">
+					<view class="flex-inline-between">
+						<text class='productTitle middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.name}}</text>
+					</view>
+					<text class='productPrice middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.priceStr}}</text>
+				</view>
+			</view>
+			<text class='subtitle middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.specName}}</text>
+			<view class="specBtnArea flex-inline-left">
+				<block wx:for="{{product.specs}}" wx:key="*this">
+					<button data-index="{{index}}" class="specBtn {{index == specChosenId?'chosen':'plain'}} tinyLabel" bindtap="changeSpec">{{item}}</button>
+				</block>
+			</view>
+			<view class="flex-inline-between">
+				<view class="flex-vertical">
+					<text class='subtitle middleLabel' decode="{{true}}" space="{{nbsp}}">购买数量</text>
+					<text class='productLeft tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">剩余：{{product.leftNum}}</text>
+				</view>
+				<view class="flex-inline-right">
+					<button class="productnumb1 middleLabel" data-index="{{index}}" bindtap="numMinus">-</button>
+					<input class="productnumi1 smallLabel" auto-focus value="{{order_num}}" bindinput="numInput"></input>
+					<button class="productnumb2 middleLabel" data-index="{{index}}" bindtap="numAdd">+</button>
+				</view>
+			</view>
+		</view>
+		<button class="nextBtn middleLabel" bindtap="gotoOrder">下一步</button>
+	</view>
+</view>

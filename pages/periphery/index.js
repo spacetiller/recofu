@@ -5,7 +5,8 @@ Page({
 	 * 页面的初始数据
 	 */
 	data: {
-
+		list: [{ imgurl: "../../static/images/front_default.jpg", url: "" }, 
+					 { imgurl: "../../static/images/front_default.jpg", url: "" }]
 	},
 
 	/**
