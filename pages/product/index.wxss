@@ -1,0 +1,193 @@
+/* pages/product/index.wxss */
+@import "../../static/css/common.wxss";
+.container {
+  height: 100%;
+  width:100%;
+}
+.container .sw {
+  width: 750rpx;
+	height: 750rpx;
+}
+.sw image {
+	width: 100%
+}
+.order {
+	position: absolute;
+	top: 670rpx;
+	right: 20rpx;
+	padding: 5rpx 20rpx;
+	background-color: #101010;
+	border-radius: 50rpx;
+	color: #FFFFFF;
+	width: 120rpx;
+	height: 50rpx;
+	text-align: center;
+}
+.info {
+	padding: 0 20rpx;
+}
+.title {
+	margin-top: 20rpx;
+  width: 100%;
+}
+.price {
+	margin-top: 24rpx;
+	color: #E51C23;
+}
+.got {
+	color: #E51C23;
+}
+.provider {
+	margin-top: 22rpx;
+	color: #737373;
+}
+.store {
+	margin: 36rpx 0;
+	color: #AAAAAA;
+}
+.detailarea {
+	margin-top: 34rpx;
+	margin-bottom: 50rpx;
+}
+.detail-image {
+	width: 100%;
+}
+
+.submitArea {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 750rpx;
+	height: 100rpx;
+	background-color: #FFFFFF;
+	text-align: right;
+}
+.submitBtn {
+	margin: 0rpx 0rpx 0rpx 550rpx; 
+	width: 200rpx;
+	height: 90rpx;
+	border-radius: 0rpx;
+	background-color: rgba(229, 28, 35, 1);
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+	line-height: 90rpx;
+}
+
+/* ---------------  弹出购买框  ----------------- */
+.buy_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.buy_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+}
+
+.buyArea {
+	padding: 20rpx;
+}
+.buyImage {
+	width: 140rpx;
+	height: 140rpx;
+}
+.buyTitle {
+	width: 480rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+	margin-top: -20rpx;
+}
+.buyPrice {
+	color: #E51C23;
+}
+.buyClose {
+	margin: 0rpx 0rpx 20rpx 10rpx;
+	width: 40rpx;
+	height: 40rpx;
+}
+.subtitle {
+	margin-top: 40rpx;
+}
+.specBtnArea {
+	flex-flow: row wrap;
+	align-content: space-around;
+}
+.specBtn {
+	margin-top: 20rpx;
+	margin-right: 20rpx;
+	width: 200rpx;
+	height: 63rpx;
+	line-height: 63rpx;
+	border-radius: 100rpx;
+	text-align: center;
+}
+.specBtn.plain {
+	background-color: #FFFFFF;
+	color: rgba(190, 194, 201, 1);
+	border: 1px solid rgba(190, 194, 201, 1);
+}
+.specBtn.chosen {
+	background-color: rgba(229, 28, 35, 1);
+	color: rgba(255, 255, 255, 1);
+	border: 0rpx;
+}
+.buyLeft {
+	margin-top: 20rpx;
+}
+.buynumb1 {
+	width: 72rpx;
+	height: 72rpx;
+	line-height: 65rpx;
+	border-radius: 20rpx 0rpx 0rpx 20rpx;
+	padding: 0rpx;
+	/*background-color: rgba(236, 236, 236, 1);*/
+	color: rgba(16, 16, 16, 1);
+	text-align: center;
+	border: 1px solid rgba(187, 187, 187, 1);
+}
+.buynumi1 {
+	width: 110rpx;
+	height: 68rpx;
+	color: rgba(136, 136, 136, 1);
+	text-align: center;
+	border-top: 1px solid rgba(187, 187, 187, 1);
+	border-bottom: 1px solid rgba(187, 187, 187, 1);
+}
+.buynumb2 {
+	width: 72rpx;
+	height: 72rpx;
+	line-height: 65rpx;
+	border-radius: 0px 20rpx 20rpx 0px;
+	padding: 0rpx;
+	color: rgba(16, 16, 16, 1);
+	text-align: center;
+	border: 1px solid rgba(187, 187, 187, 1);
+		
+}
+.nextBtn {
+	margin-top: 80rpx;
+	width: 100%;
+	height: 90rpx;
+	line-height: 90rpx;
+	border-radius: 0rpx;
+	background-color: rgba(229, 28, 35, 1);
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+	font-family: Microsoft Yahei;
+
+}

@@ -1,0 +1,73 @@
+<!--pages/product/index.wxml-->
+
+<view class="container">
+  <swiper class="sw" indicator-dots="{{indicatorDots}}" circular="{{circular}}" vertical="{{vertical}}" previousMargin="{{previousMargin}}" nextMargin="{{nextMargin}}" bindchange="imageChange">
+    <block wx:for="{{imagelist}}" wx:key="*this">
+      <swiper-item class="swiper-item">
+        <view class="flex-vertical">
+          <image src="{{item}}" class="slide-image" mode='widthFix' />
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <text class="order smallLabel">{{current}}/{{total}}</text>
+  <view class="info flex-vertical">
+    <text class='title middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.name}}</text>
+    <block wx:if="{{ptype!=3}}">
+      <text class='price middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.price}}{{product.ptype == 1?"福分/份":"福分起捐"}}</text>
+    </block>
+    <view class="price flex-inline-between" wx:else>
+      <text class='middleLabel' decode="{{true}}" space="{{nbsp}}">￥{{product.priceStr}}</text>
+      <text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">可获得{{product.price}}福分</text>
+    </view>
+    <text class='provider tinyLabel' decode="{{true}}" space="{{nbsp}}">{{product.ptype==3?"提供者":"合作者"}}  {{product.provider}}</text>
+    <view class="store flex-inline-between tinyLabel">
+      <text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">剩余{{product.leftNum}}</text>
+      <text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">销量{{product.saleNum}}</text>
+    </view>
+    <text class='middleLabel' decode="{{true}}" space="{{nbsp}}">图文详情</text>
+  </view>
+  <view class="detailarea">
+    <block class="flex-vertical" wx:for="{{detailimgs}}" wx:key="*this">
+      <image src="{{item}}" class="detail-image" mode='widthFix' />
+    </block>
+  </view>
+</view>
+<!--屏幕背景变暗的背景 -->
+<view class="submitArea">
+  <button class="submitBtn smallLabel" bindtap="showModal">{{product.ptype==3?"购买":"兑换"}}</button>
+</view>
+<view class="buy_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框 -->
+<view animation="{{animationData}}" class="buy_box" wx:if="{{showModalStatus}}">
+	<view class="buyArea flex-vertical">
+		<view class="flex-inline-between">
+			<image class='buyImage' src='{{imagelist[0]}}' mode='aspectFill'></image>
+			<view class="flex-vertical">
+				<view class="flex-inline-between">
+					<text class='buyTitle middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.name}}</text>
+					<image class='buyClose' src='../../static/images/close_cycle.png' mode='aspectFill' bindtap="hideModal"></image>
+				</view>
+				<text class='buyPrice middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.priceStr}}</text>
+			</view>
+		</view>
+		<text class='subtitle middleLabel' decode="{{true}}" space="{{nbsp}}">{{product.specName}}</text>
+		<view class="specBtnArea flex-inline-left">
+			<block wx:for="{{product.specs}}" wx:key="*this">
+				<button data-index="{{index}}" class="specBtn {{index == specChosenId?'chosen':'plain'}} tinyLabel" bindtap="changeSpec">{{item}}</button>
+			</block>
+		</view>
+		<view class="flex-inline-between">
+			<view class="flex-vertical">
+				<text class='subtitle middleLabel' decode="{{true}}" space="{{nbsp}}">购买数量</text>
+				<text class='buyLeft tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">剩余：{{product.leftNum}}</text>
+			</view>
+			<view class="flex-inline-right">
+				<button class="buynumb1 middleLabel" data-index="{{index}}" bindtap="numMinus">-</button>
+				<input class="buynumi1 smallLabel" auto-focus value="{{order_num}}" bindinput="numInput"></input>
+				<button class="buynumb2 middleLabel" data-index="{{index}}" bindtap="numAdd">+</button>
+			</view>
+		</view>
+	</view>
+	<button class="nextBtn middleLabel" bindtap="gotoOrder">下一步</button>
+</view>
