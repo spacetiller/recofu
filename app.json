@@ -34,7 +34,7 @@
 				"pagePath": "pages/shop/index",				
 				"iconPath": "static/images/ic_menu_fufen_nor.png",
 				"selectedIconPath": "static/images/ic_menu_fufen_pressed.png",
-				"text": "福分"
+				"text": "福缘"
 			},
 			{
 				"pagePath": "pages/my/index",
