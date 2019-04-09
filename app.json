@@ -1,5 +1,6 @@
 {
   "pages": [
+		"pages/my/index",
 		"pages/index/index",
     "pages/home/index",
 		"pages/list/index",
@@ -9,8 +10,7 @@
 		"pages/periphery/index",
 		"pages/shop/index",
 		"pages/product/index",
-		"pages/order/index",
-		"pages/my/index"
+		"pages/order/index"
 	],
   "window": {
     "backgroundTextStyle": "light",

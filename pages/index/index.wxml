@@ -6,8 +6,8 @@
 					<navigator url='../{{item.pageName}}/index?{{item.param}}={{item.value}}'>
 						<view class='listItem flex-vertical'>
 							<image class='poster' src='{{item.imgurl}}' mode='aspectFill'></image>
-							<text class='title bigLabel'>{{item.title}}</text>
-							<text class='provider tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">提供者  {{item.provider}}</text>
+							<text class='title bigLabel titleColor'>{{item.title}}</text>
+							<text class='provider tinyLabel deepGray' decode="{{true}}" space="{{nbsp}}">提供者  {{item.provider}}</text>
 						</view>
 					</navigator>
 				</view>
@@ -17,8 +17,8 @@
 					<navigator class='halfnavi' url='../{{item.pageName}}/index?{{item.param}}={{item.value}}'>
 						<view class='listItem2 flex-vertical'>
 							<image class='poster2' src='{{item.imgurl}}' mode='aspectFit'></image>
-							<text class='title2 bigLabel'>{{item.title}}</text>
-							<text class='provider2 tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">{{item.provider}}提供服务</text>
+							<text class='title2 bigLabel titleColor'>{{item.title}}</text>
+							<text class='provider2 tinyLabel deepGray' decode="{{true}}" space="{{nbsp}}">{{item.provider}}提供服务</text>
 						</view>
 					</navigator>
 				</view>

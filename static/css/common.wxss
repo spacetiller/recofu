@@ -35,13 +35,15 @@
 .marginLeft {
 	margin-left: 30rpx;
 }
-
+/* 34px */
 .bigLabel {
 	font-size: 36rpx;
 }
+/* 32px */
 .middleLabel {
 	font-size: 34rpx;
 }
+/* 28px */
 .smallLabel {
 	font-size: 32rpx;
 }
@@ -49,6 +51,7 @@
 	font-size: 32rpx;
 	color: #AAAAAA;
 }
+/* 24px */
 .tinyLabel {
 	font-size: 28rpx;
 }
