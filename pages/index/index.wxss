@@ -1,9 +1,9 @@
 /**index.wxss**/
 @import "../../static/css/common.wxss";
 .page{
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
 }
 .page-body{
   width: 100%;
@@ -22,4 +22,30 @@
 }
 .provider {
 	margin: 16rpx 0rpx;
+}
+.halfArea {
+	flex-flow: row wrap;
+	align-content: space-around;
+}
+.halfcol {
+	width: 49%;
+}
+.halfnavi {
+	width: 100%;
+}
+.listItem2 {
+	margin-bottom: 20rpx;
+	padding: 20rpx 20rpx 24rpx;
+}
+.poster2{
+	width: 100%;
+	height: 132rpx;
+	border-radius: 20rpx;
+}
+.title2 {
+	text-align: center;
+	margin: 48rpx 0rpx 20rpx;
+}
+.provider2 {
+	text-align: center;
 }

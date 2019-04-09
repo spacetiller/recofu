@@ -1,14 +1,28 @@
 <view class="page">
   <view class='page-body'>
-    <view class='page-list' wx:for="{{frontList}}" wx:key="id">
-      <!--类型判断,显示不同的数据-->
-      <navigator url='../{{item.pageName}}/index?{{item.param}}={{item.value}}'>
-        <view class='listItem flex-vertical'>
-          <image class='poster' src='{{item.imgurl}}' mode='aspectFill'></image>
-          <text class='title bigLabel'>{{item.title}}</text>
-          <text class='provider smallGrayLabel' decode="{{true}}" space="{{nbsp}}">提供者  {{item.provider}}</text>
-        </view>
-      </navigator>
+    <view class='page-list' wx:for="{{frontList}}" wx:for-item="sublist" wx:key="*this">
+			<block wx:if="{{sublist[0].showType==1}}">
+				<view class='banner' wx:for="{{sublist}}" wx:key="*this">
+					<navigator url='../{{item.pageName}}/index?{{item.param}}={{item.value}}'>
+						<view class='listItem flex-vertical'>
+							<image class='poster' src='{{item.imgurl}}' mode='aspectFill'></image>
+							<text class='title bigLabel'>{{item.title}}</text>
+							<text class='provider tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">提供者  {{item.provider}}</text>
+						</view>
+					</navigator>
+				</view>
+			</block>
+			<view class='halfArea flex-inline-left' wx:else>
+				<view class='halfcol' wx:for="{{sublist}}" wx:key="*this">
+					<navigator class='halfnavi' url='../{{item.pageName}}/index?{{item.param}}={{item.value}}'>
+						<view class='listItem2 flex-vertical'>
+							<image class='poster2' src='{{item.imgurl}}' mode='aspectFit'></image>
+							<text class='title2 bigLabel'>{{item.title}}</text>
+							<text class='provider2 tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">{{item.provider}}提供服务</text>
+						</view>
+					</navigator>
+				</view>
+			</view>
     </view>
   </view>
 </view>

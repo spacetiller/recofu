@@ -22,10 +22,41 @@ Page({
     var that = this;
 		var url = "https://" + config.host2 + 'front';
 		console.log(url);
+
+		function group(array, key, gkey) {	// key: 排序, gkey: 合并分组
+			//console.log(array);
+			array.sort(function(a,b){ return b[key] - a[key]});
+			var gk = -1;
+			var newarr = [];
+			var subarr = [];
+			for(var i=0; i < array.length; i++){
+				//console.log(i);
+				if(gk == array[i][gkey]){
+					subarr.unshift(array[i])
+					//console.log(subarr);
+				} else {
+					gk = array[i][gkey];
+					if(subarr.length > 0) {
+						newarr.unshift(subarr); 
+						//console.log(newarr);
+						subarr = [];
+					}
+					subarr.unshift(array[i]);
+					//console.log(subarr);
+				}
+			}
+			if (subarr.length > 0) {
+				newarr.unshift(subarr);
+				//console.log(newarr);
+			}
+			console.log(newarr);
+			return newarr;
+		}
 		util.makeRequest(that, url, {}, function (res) {
 			if (res.code == 0) {
-				console.log(res);
-				that.setData({ frontList: res.data })
+				//console.log(res);
+				var list = group(res.data, "priority", "showType")
+				that.setData({ frontList: list })
 			} else {
 				console.log(res.data.msg);
 				//return false;
