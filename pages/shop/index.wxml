@@ -19,7 +19,7 @@
 								<image class='poster' src='{{item.imgurl}}' mode='aspectFill'></image>
 								<view class="flex-inline-between">
 									<text class='title middleLabel' decode="{{true}}" space="{{nbsp}}">{{item.name}}</text>
-									<text class='price middleLabel' decode="{{true}}" space="{{nbsp}}">{{item.price}}{{item.ptype == 1?"福分/份":"福分起捐"}}</text>
+									<!--text class='price middleLabel' decode="{{true}}" space="{{nbsp}}">{{item.price}}{{item.ptype == 1?"福分/份":"福分起捐"}}</text-->
 								</view>
 								<text class='provider tinyGrayLabel' decode="{{true}}" space="{{nbsp}}">合作者  {{item.provider}}</text>
 							</navigator>

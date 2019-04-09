@@ -10,9 +10,9 @@ Page({
 		labels: ['福运', '福修'],
 		_num: 0,
 		goods: [
-			{ pid: 1, name: 'XXX居士 趋吉避凶妙招', price: 100, ptype: 1, imgurl: 'http://image.pk4yo.com/recofu/lucky_jushi_1.jpg', provider: '合作者'},
+			{ pid: 1, name: 'XXX居士 趋吉避凶妙招', price: 100, ptype: 2, imgurl: 'http://image.pk4yo.com/recofu/lucky_jushi_1.jpg', provider: '合作者'},
 			{ pid: 2, name: 'XXX居士 桃花运妙招', price: 100, ptype: 2, imgurl: 'http://image.pk4yo.com/recofu/lucky_taohua_1.jpg', provider: '合作者'},
-			{ pid: 3, name: 'XXX居士 旺财运妙招', price: 100, ptype: 1, imgurl: 'http://image.pk4yo.com/recofu/lucky_drum_1.jpg', provider: '合作者'}
+			{ pid: 3, name: 'XXX居士 旺财运妙招', price: 100, ptype: 2, imgurl: 'http://image.pk4yo.com/recofu/lucky_drum_1.jpg', provider: '合作者'}
 		], // 数据列表	list[]
 		products: [
 			{ pid: 1, name: '灭度沉香单圈佛珠手链男女款手串念珠平安吉祥礼物状', price: 6930.00, priceStr: "6930.00", ptype: 3, imgurl: 'http://image.pk4yo.com/recofu/product_bracelet_1.jpg', provider: '智天乐游' },
