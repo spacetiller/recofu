@@ -8,12 +8,12 @@ Page({
 	data: {
 		title: '我的',
 		userInfo: {},
+		binded: false,
 		logged: false,
 		takeSession: false,
 		requestResult: '',
 		authorized: false,
 		canIUse: wx.canIUse('button.open-type.getUserInfo')
-
 	},
 
   /**

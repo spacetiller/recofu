@@ -1,46 +1,56 @@
 <!--pages/my/index.wxml-->
 <view class="container">
-    <!-- audio测试 2 -->
-	<view class="header">
+  <!-- audio测试 2 -->
+  <view class="header">
     <view wx:if="{{!authorized}}">
-      <button 
-        wx:if="{{canIUse}}" 
-        open-type="getUserInfo" 
-        bindgetuserinfo="getUserInfo"
-      >授权登录</button>
+      <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
       <view wx:else>请升级微信版本</view>
     </view>
     <block wx:else>
-			<view class="infoArea flex-inline-left">
-      	<image class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-				<view class="nameArea flex-vertical">
-					<text class="nickname bigLabel">{{userInfo.nickName}}</text>
-					<text class="mobile smallGrayLabel">{{userInfo.mobile && userInfo.mobile.length > 0?userInfo.mobile:"未预约"}}</text>
-				</view>
-			</view>
+      <view class="infoArea flex-inline-left">
+        <image class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <view class="nameArea flex-vertical">
+          <text class="nickname bigLabel">{{userInfo.nickName}}</text>
+          <!--text class="mobile smallGrayLabel">{{userInfo.mobile && userInfo.mobile.length > 0?userInfo.mobile:"未预约"}}</text-->
+        </view>
+      </view>
     </block>
-	</view>
-	<view class="listarea">
-		<view class="mylist flex-inline-between" bindtap="gotoFav">
-			<view class="flex-inline-left">
-				<image src="../../static/images/ic_list_favorite.png"></image>
-				<text>我的收藏</text>
-			</view>
-			<view class="arrow"></view>
-		</view>
-		<view class="mylist flex-inline-between" bindtap="gotoReserve">
-			<view class="flex-inline-left">
-				<image src="../../static/images/ic_list_reserve.png"></image>
-				<text>我的预约</text>
-			</view>
-			<view class="arrow"></view>
-		</view>
-		<view class="mylist flex-inline-between" bindtap="gotoHongbao">
-			<view class="flex-inline-left">
-				<image src="../../static/images/ic_list_hongbao.png"></image>
-				<text>我的红包</text>
-			</view>
-			<view class="arrow"></view>
-		</view>
-	</view>
+  </view>
+  <view class="phoneArea flex-inline-between" wx:if="{{!binded}}">
+    <view><text class="tinyLabel deepGray">手机号未绑定</text></view>
+		<view><button class="phoneBtn smallLabel" bindtap='bindPhone'>绑定手机</button></view>
+  </view>
+  <view class="phoneArea flex-inline-between" wx:else>
+    <text>手机号：{{userinfo?userinfo.mobile:""}}（已绑定）</text>
+  </view>
+  <view class="listarea">
+    <view class="mylist flex-inline-between" bindtap="gotoFav">
+      <view class="flex-inline-left">
+        <image src="../../static/images/ic_list_fufen.png"></image>
+        <text class="smallLabel titleColor">我的福分</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+    <view class="mylist flex-inline-between" bindtap="gotoReserve">
+      <view class="flex-inline-left">
+        <image src="../../static/images/ic_list_order.png"></image>
+        <text class="smallLabel titleColor">我的订单</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+    <view class="mylist flex-inline-between" bindtap="gotoHongbao">
+      <view class="flex-inline-left">
+        <image src="../../static/images/address_order.png"></image>
+        <text class="smallLabel titleColor">收货地址</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+    <view class="mylist lastlist flex-inline-between" bindtap="gotoHongbao">
+      <view class="flex-inline-left">
+        <image src="../../static/images/ic_list_invite.png"></image>
+        <text class="smallLabel titleColor">邀请码</text>
+      </view>
+      <view class="arrow"></view>
+    </view>
+  </view>
 </view>
