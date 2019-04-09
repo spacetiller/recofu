@@ -55,14 +55,17 @@ Page({
 				"http://image.pk4yo.com/recofu/goods_daliangshan_detail_3.jpg"];
 			title = "善行详情";
 		}else{
-			product = { pid: 1, name: '关注大凉山贫困儿童的生存现状', price: 100, priceStr: "100", ptype: 1, imgurl: 'http://image.pk4yo.com/recofu/goods_daliangshan_1.jpg', provider: '合作者' };
-			imagelist = ["http://image.pk4yo.com/recofu/goods_daliangshan_slider_1.jpg",
-				"http://image.pk4yo.com/recofu/goods_daliangshan_slider_2.jpg",
-				"http://image.pk4yo.com/recofu/goods_daliangshan_slider_3.jpg",
-				"http://image.pk4yo.com/recofu/goods_daliangshan_slider_4.jpg"];
-			detailimgs = ["http://image.pk4yo.com/recofu/goods_daliangshan_detail_1.jpg",
-				"http://image.pk4yo.com/recofu/goods_daliangshan_detail_2.jpg",
-				"http://image.pk4yo.com/recofu/goods_daliangshan_detail_3.jpg"];
+			product = {
+				pid: 1, name: 'XXX居士 趋吉避凶妙招', price: 100, priceStr: "100", ptype: 2, imgurl: 'http://image.pk4yo.com/recofu/goods_default.jpg', provider: '合作者', desc: "有一位证得阿罗汉果位的师父，一天在禅定中知道自己疼爱的徒弟只剩七天的寿命，天一亮，师父压抑着悲伤，将小沙弥叫到跟前说：“好孩子，你有好久不曾回家看望父母了，你收拾行李回去和父母聚一聚吧!” \
+　　不知情的小沙弥虽然感觉到师父的异样，但是仍然高高兴兴地拜别了师父回家乡去了。	\
+				　　日子一天一天的过去，过了七天小沙弥还没有回来，虽然断了烦恼的阿罗汉，也难免为小徒弟的不幸遭遇而怅然伤感。心中正在为再也见不到徒弟而郁郁不乐时，小沙弥突然平平安安地回来了。	\
+				　　阿罗汉大为惊讶，牵着小沙弥的手上下打量地说：“你怎么好好的回来了?你做了什么事吗 ?”		\
+				　　“没有呀!”小沙弥迷惑地摇头回答。		\
+				　　“你仔细想想看，有没有看到什么?做了什么 ?”师父不放松地追问。	\
+				　　“噢!我想起来了。回家的途中，我经过一池塘，看到一群蚂蚁被困在水中，我捡了一片叶子，把它们救上了岸。”小沙弥如实的回答。	\
+				　　师父听了之后，马上再进入神通之中观看徒弟的命运：这个孩子不但去除了夭寿之相，并且有百岁的寿命。小沙弥的一念慈悲，不但救了蚂蚁的性命，也改变了自己的命运。" };
+			imagelist = ["http://image.pk4yo.com/recofu/goods_default.jpg"];
+			detailimgs = ["http://image.pk4yo.com/recofu/erweima.png"];
 			title = "善行详情";
 		}
 		// get image list from product
@@ -97,6 +100,20 @@ Page({
 			duration: 1000,
 			mask: false
 		});
+	},
+	saveImage: function (e){
+		wx.getImageInfo({
+			src: 'http://image.pk4yo.com/recofu/erweima.png',
+			success: function (ret) {
+				var path = ret.path;
+				wx.saveImageToPhotosAlbum({
+					filePath: path,
+					success(result) {
+						console.log(result)
+					}
+				})
+			}
+		})
 	},
 	showModal: function () {
 		// 显示遮罩层

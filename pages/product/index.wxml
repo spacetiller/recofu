@@ -26,11 +26,14 @@
       <text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">销量{{product.saleNum}}</text>
     </view>
 		<view class="store flex-inline-left tinyLabel" wx:else>
-			<text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">参与此善行人数：{{product.saleNum}}</text>
+			<text class='tinyLabel' decode="{{true}}" space="{{nbsp}}">{{ptype==1?"参与此善行人数：":""}}{{ptype==1?product.saleNum:""}}</text>
 		</view>
     <text class='middleLabel' decode="{{true}}" space="{{nbsp}}">图文详情</text>
   </view>
   <view class="detailarea">
+		<view class="detail-text">
+			<text class="smallLabel" decode="{{true}}" space="{{nbsp}}">{{product.desc?product.desc:""}}</text>
+		</view>
     <block class="flex-vertical" wx:for="{{detailimgs}}" wx:key="*this">
       <image src="{{item}}" class="detail-image" mode='widthFix' />
     </block>
@@ -40,6 +43,10 @@
 <view class="submitArea flex-inline-between" wx:if="{{ptype==3}}">
 	<text>  </text>
   <button class="submitBtn smallLabel" bindtap="showModal">{{product.ptype==3?"购买":"捐献福分"}}</button>
+</view>
+<view class="submitArea flex-inline-between" wx:elif="{{ptype==2}}">
+	<text>  </text>
+  <button class="submitBtn2 smallLabel" bindtap="saveImage">保存图片二维码</button>
 </view>
 <view class="submitArea flex-inline-between" wx:else>
 	<text class="smallGrayLabel" wx:if="{{product.price > userinfo.fufen}}">福分不足，无法捐献</text>

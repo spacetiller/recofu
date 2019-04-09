@@ -47,7 +47,10 @@
 }
 .detailarea {
 	margin-top: 34rpx;
-	margin-bottom: 50rpx;
+	margin-bottom: 240rpx;
+}
+.detail-text {
+	margin: 0rpx 20rpx;
 }
 .detail-image {
 	width: 100%;
@@ -68,6 +71,16 @@
 .submitBtn {
 	margin: 0rpx 0rpx 0rpx 0rpx; 
 	width: 200rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+	border-radius: 0rpx;
+	background-color: rgba(229, 28, 35, 1);
+	color: rgba(255, 255, 255, 1);
+	text-align: center;
+}
+.submitBtn2 {
+	margin: 0rpx 0rpx 0rpx 0rpx; 
+	width: 100%;
 	height: 100rpx;
 	line-height: 100rpx;
 	border-radius: 0rpx;
