@@ -3,11 +3,12 @@
 
 
 .infoArea {
-	padding: 60rpx 0rpx 60rpx 30rpx;
+	padding: 40rpx 0rpx 40rpx 20rpx;
 }
 .infoArea > image {
 	width: 120rpx;
 	height: 120rpx;
+	border-radius: 100rpx;
 }
 .nameArea {
 	width: 50%;
@@ -15,6 +16,10 @@
 }
 .nickname {
 	margin-bottom: 10rpx;
+}
+
+.listarea {
+	padding: 0rpx 20rpx;
 }
 
 .mylist {
