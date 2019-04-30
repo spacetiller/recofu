@@ -84,9 +84,19 @@ Page({
 			app.loginUser(logcb);
 		}
 	},
-	gotoFav: function () {
+	gotoFufen: function () {
 		wx.navigateTo({
-			url: '/pages/myfavorite/myfavorite'
+			url: '/pages/myfufen/index'
+		})
+	},
+	gotoOrder: function () {
+		wx.navigateTo({
+			url: '/pages/myorder/index'
+		})
+	},
+	gotoAddr: function () {
+		wx.navigateTo({
+			url: '/pages/myaddr/index'
 		})
 	},
 

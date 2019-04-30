@@ -23,34 +23,49 @@
   <view class="phoneArea flex-inline-between" wx:else>
     <text>手机号：{{userinfo?userinfo.mobile:""}}（已绑定）</text>
   </view>
-  <view class="listarea">
-    <view class="mylist flex-inline-between" bindtap="gotoFav">
+  <view disabled="true" class="listarea">
+    <view class="mylist flex-inline-between" bindtap="gotoFufen">
       <view class="flex-inline-left">
         <image src="../../static/images/ic_list_fufen.png"></image>
         <text class="smallLabel titleColor">我的福分</text>
       </view>
       <view class="arrow"></view>
     </view>
-    <view class="mylist flex-inline-between" bindtap="gotoReserve">
+    <view class="mylist flex-inline-between" bindtap="gotoOrder">
       <view class="flex-inline-left">
         <image src="../../static/images/ic_list_order.png"></image>
         <text class="smallLabel titleColor">我的订单</text>
       </view>
       <view class="arrow"></view>
     </view>
-    <view class="mylist flex-inline-between" bindtap="gotoHongbao">
+    <view class="mylist flex-inline-between" bindtap="gotoAddr">
       <view class="flex-inline-left">
         <image src="../../static/images/address_order.png"></image>
         <text class="smallLabel titleColor">收货地址</text>
       </view>
       <view class="arrow"></view>
     </view>
-    <view class="mylist lastlist flex-inline-between" bindtap="gotoHongbao">
+    <view class="mylist lastlist flex-inline-between" bindtap="gotoInvite">
       <view class="flex-inline-left">
         <image src="../../static/images/ic_list_invite.png"></image>
         <text class="smallLabel titleColor">邀请码</text>
       </view>
       <view class="arrow"></view>
+    </view>
+    <view class="mylist flex-inline-between" bindtap="gotoHelp">
+      <view class="flex-inline-left">
+        <image src="../../static/images/ic_list_help.png"></image>
+        <text class="smallLabel titleColor">帮助</text>
+      </view>
+    </view>
+    <view class="mylist lastlist flex-inline-between" >
+      <view class="flex-inline-left">
+        <image src="../../static/images/ic_list_invite.png"></image>
+        <text class="smallLabel titleColor">客服电话</text>
+      </view>
+      <view>
+				<text class="smallLabel titleColor">15912345678</text>
+			</view>
     </view>
   </view>
 </view>

@@ -1,0 +1,18 @@
+<!--pages/myfufen/index.wxml-->
+<view class="container">
+  <view class="myffArea flex-vertical-center">
+		<text class="smallLabel">我的福分</text>
+		<text class="largeLabel">00000{{}}</text>
+	</view>
+	<view class="flex-inline-between">
+		<view class="btnFufen smallLabel" bindtap="gotoFufen">获得福分</view>
+		<view class="btnGoods smallLabel" bindtap="gotoGoods">行善积德</view>
+	</view>
+	<view class="listarea">
+    <view class="mylist flex-inline-between" bindtap="gotoFufen">
+      <view class="flex-inline-left">
+       <text class="smallLabel titleColor">我的福分</text>
+      </view>
+    </view>
+  </view>
+</view>

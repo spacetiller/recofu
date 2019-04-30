@@ -1,6 +1,9 @@
 {
   "pages": [
 		"pages/my/index",
+		"pages/myfufen/index",
+		"pages/myorder/index",
+		"pages/myaddr/index",
 		"pages/index/index",
     "pages/home/index",
 		"pages/list/index",
